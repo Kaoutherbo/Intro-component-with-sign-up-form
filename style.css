@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Colors */
+
+    /* Primary */
+    
+    --Red: hsl(0, 100%, 74%) ;
+    --Green: hsl(154, 59%, 51%);
+    
+    /* Accent */
+    
+    --Blue: hsl(248, 32%, 49%);
+    
+    /* Neutral */
+    
+    --Dark-Blue: hsl(249, 10%, 26%) ;
+    --Grayish-Blue: hsl(246, 25%, 77%);
+    
+        /* Fonts */
+    
+    --Font-size: 16px;
+    --Font-Family:'Poppins',sans-serif;
+    --Font-Weight-normal: 400;
+    --Font-Weight-medium:500;
+    --Font-Weight-semibold: 600;
+    --Font-Weight-bold: 700;
+
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg-intro-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--Font-Family);
+    font-size: var(--Font-size);
+    font-weight: var(--Font-Weight-normal);
+    background-color: var(--Red);
+}
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-self: center;
+    padding: 10%;
+}
+.description{
+    margin-top: 9%;
+    margin-left: 2rem;
+}
+.description > h1{
+    color: white;
+    font-size: 2.5rem;
+    width: 80%;
+    font-weight: var(--Font-Weight-bold);
+}
+.description > p{
+    margin-top: 1.5rem;
+    width: 90%;
+    color: white;
+    font-weight: var(--Font-Weight-normal);
+}
+.trial{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 85%;
+}
+.form{
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0 6px 0 rgba(0,0,0,0.2);
+}
+.top{
+    background-color: var(--Blue);
+    width: 100%;
+    height: 55px;
+    border-radius: 10px;
+    box-shadow:0 6px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+.top > p{
+    font-weight: var(--Font-Weight-semibold);
+}
+.top > p > span{
+    color: var(--Grayish-Blue);
+    font-weight: var(--Font-Weight-normal);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+input{
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    padding: 1.5rem;
+}
+input::placeholder{
+    font-family: var(--Font-Family);
+    font-size:15px;
+    font-weight: var(--Font-Weight-medium);
+    color: var(--Dark-Blue);
+}
+input:hover{
+    font-family: var(--Font-Family);
+    font-size:15px;
+    font-weight: var(--Font-Weight-medium);
+    border:1px solid var(--Dark-Blue);
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    background-color: var(--Green);
+    border:none;
+    border-radius: 5px;
+    color: white;  
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--Font-Weight-semibold);
+    margin-bottom: .6rem;
+    box-shadow:.5px 2px .5px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.btn:hover{
+    opacity: .8;
+}
+.form > p{
+    font-size: 12px;
+    margin-left: 1.5rem;
+    color: var(--Grayish-Blue);
+    width: 100%;
+}
+b{
+    color: var(--Red);
+}
+.error{
+    transform: translateX(90%);
+    margin-top: -3.2rem;
+    display: none;
+}
+small{
+    color: var(--Red);
+    font-style: italic;
+    font-family: var(--Font-Family);
+    font-size: 11px;
+    margin-left: 17.1rem;
+    margin-top: -.2rem;
+    width: 100%;
+    font-weight: var(--Font-Weight-medium);
+    display: none;
+}
+
+@media (max-width:400px) {
+    main{
+        flex-direction: column;
+        padding:0;
+        grid-area: 2rem;
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+    .description{
+        margin-top: 4rem;
+        text-align: center;
+        width: 95%;
+    }
+    .description > h1{
+        font-size: 1.7rem;
+    }
+    .trial{
+        width: 90%;
+        margin: auto;
+    }
+    .top{
+        height: max-content;
+        margin-top: 4rem;
+    }
+    .top > p{
+        width: 70%;
+        margin-left: 2.5rem;
+    }
+    .form{
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+    .form > p{
+        margin-left: 0;
+    }
+    .error{
+        transform: translateX(40%);
+    }
+    small{
+       margin-left: 3rem;
+    }
+}
